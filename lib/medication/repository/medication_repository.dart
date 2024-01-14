@@ -20,9 +20,9 @@ class MedicationRepository {
         try {
           final userId = _userRepository.currentUser.id;
 
-          if (userId.isEmpty) return const Result.success(IListConst([]));
+          if (userId.isEmpty) return const Result.error("No user id");
 
-          await Future<void>.delayed(const Duration(seconds: 1));
+          await Future<void>.delayed(const Duration(seconds: 3));
 
           final jsonString = await rootBundle.loadString(Assets.json.users);
 

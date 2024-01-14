@@ -11,7 +11,7 @@ part "activity.model.freezed.dart";
 part "activity.model.g.dart";
 
 @freezed
-sealed class Activity with _$Activity {
+class Activity with _$Activity {
   const factory Activity({
     @Default(IListConst<Visit>([])) IList<Visit> visits,
     @Default(IListConst<Vaccination>([])) IList<Vaccination> vaccinations,

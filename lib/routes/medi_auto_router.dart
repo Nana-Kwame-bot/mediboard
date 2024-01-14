@@ -7,8 +7,6 @@ class MediAutoRouter extends $MediAutoRouter {
 
   @override
   List<AutoRoute> get routes {
-    return [
-      AutoRoute(page: HomePage.page, initial: true),
-    ];
+    return [AutoRoute(page: HomePage.page, initial: true)];
   }
 }

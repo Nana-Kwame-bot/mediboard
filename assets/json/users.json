@@ -38,5 +38,49 @@
         "evening"
       ]
     }
-  ]
+  ],
+  "activities": {
+    "visits": [
+      {
+        "description": "Regular Checkup",
+        "visitedAt": "2022-01-01T10:00:00Z",
+        "doctor": "Dr. Smith",
+        "visitType": "followUp"
+      }
+    ],
+    "vaccinations": [
+      {
+        "description": "Flu Shot",
+        "visitedAt": "2022-01-01T10:00:00Z",
+        "doctor": "Dr. Smith",
+        "visitType": "newVisit"
+      }
+    ],
+    "labTests": [
+      {
+        "priority": "high",
+        "description": "Blood Test",
+        "timeConducted": "2022-01-01T10:00:00Z",
+        "conductedAt": "LabCorp",
+        "referredBy": "Dr. Smith"
+      }
+    ],
+    "imaging": [
+      {
+        "priority": "medium",
+        "description": "X-Ray",
+        "lastRenewedAt": "2022-01-01T10:00:00Z",
+        "referredBy": "Dr. Smith",
+        "diagnosis": "Fracture"
+      }
+    ],
+    "surgeries": [
+      {
+        "description": "Appendectomy",
+        "visitedAt": "2022-01-01T10:00:00Z",
+        "doctor": "Dr. Smith",
+        "visitType": "unknown"
+      }
+    ]
+  }
 }

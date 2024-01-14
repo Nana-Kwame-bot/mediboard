@@ -28,4 +28,24 @@ extension ActivityExtension on Activity {
         numberOfImaging +
         numberOfSurgeries;
   }
+
+  double get visitsPercentage {
+    return numberOfVisits / numberOfActivities;
+  }
+
+  double get vaccinationsPercentage {
+    return numberOfVaccinations / numberOfActivities;
+  }
+
+  double get labTestsPercentage {
+    return numberOfLabTests / numberOfActivities;
+  }
+
+  double get imagingPercentage {
+    return numberOfImaging / numberOfActivities;
+  }
+
+  double get surgeriesPercentage {
+    return numberOfSurgeries / numberOfActivities;
+  }
 }
