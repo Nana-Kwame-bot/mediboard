@@ -1,6 +1,7 @@
 import "dart:convert";
 import "package:fast_immutable_collections/fast_immutable_collections.dart";
 import "package:flutter/services.dart";
+import "package:mediboard/gen/assets.gen.dart";
 import "package:mediboard/logger/logger.dart";
 import "package:mediboard/medication/model/medication.model.dart";
 import "package:mediboard/user/repository/user_repository.dart";
@@ -23,8 +24,7 @@ class MedicationRepository {
 
           await Future<void>.delayed(const Duration(seconds: 1));
 
-          final jsonString =
-              await rootBundle.loadString("assets/json/users.json");
+          final jsonString = await rootBundle.loadString(Assets.json.users);
 
           final userMap = jsonDecode(jsonString) as Map<String, dynamic>;
 

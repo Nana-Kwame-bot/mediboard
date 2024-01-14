@@ -28,7 +28,7 @@ class DonutChart extends StatelessWidget {
                   sections: [
                     PieChartSectionData(
                       title: "",
-                      color: AppColors.labTests,
+                      color: AppColors.labTest,
                       value: 20,
                       radius: 30,
                       titleStyle: const TextStyle(
@@ -37,7 +37,7 @@ class DonutChart extends StatelessWidget {
                     ),
                     PieChartSectionData(
                       title: "",
-                      color: AppColors.medications,
+                      color: AppColors.medication,
                       value: 20,
                       radius: 30,
                       titleStyle: const TextStyle(
@@ -46,7 +46,7 @@ class DonutChart extends StatelessWidget {
                     ),
                     PieChartSectionData(
                       title: "",
-                      color: AppColors.vaccinations,
+                      color: AppColors.vaccination,
                       value: 20,
                       radius: 30,
                       titleStyle: const TextStyle(
@@ -55,7 +55,7 @@ class DonutChart extends StatelessWidget {
                     ),
                     PieChartSectionData(
                       title: "",
-                      color: AppColors.surgeries,
+                      color: AppColors.surgery,
                       value: 20,
                       radius: 30,
                       titleStyle: const TextStyle(
@@ -64,7 +64,7 @@ class DonutChart extends StatelessWidget {
                     ),
                     PieChartSectionData(
                       title: "",
-                      color: AppColors.visits,
+                      color: AppColors.visit,
                       value: 20,
                       radius: 30,
                     ),

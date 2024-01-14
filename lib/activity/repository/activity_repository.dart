@@ -1,0 +1,3 @@
+class ActivityRepository {
+  const ActivityRepository();
+}
