@@ -1,0 +1,42 @@
+{
+  "medications": [
+    {
+      "name": "ENTRESTO, 100 mg",
+      "frequency": "2/day",
+      "dosingTimes": [
+        "morning",
+        "evening"
+      ]
+    },
+    {
+      "name": "Spironolactone, 25mg",
+      "frequency": "1/day",
+      "dosingTimes": [
+        "morning"
+      ]
+    },
+    {
+      "name": "ENTRESTO, 100 mg",
+      "frequency": "2/day",
+      "dosingTimes": [
+        "morning",
+        "evening"
+      ]
+    },
+    {
+      "name": "Spironolactone, 25mg",
+      "frequency": "1/day",
+      "dosingTimes": [
+        "morning"
+      ]
+    },
+    {
+      "name": "ENTRESTO, 100 mg",
+      "frequency": "2/day",
+      "dosingTimes": [
+        "morning",
+        "evening"
+      ]
+    }
+  ]
+}

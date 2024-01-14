@@ -30,4 +30,7 @@ abstract class AppColors {
 
   // slider safe
   static const Color sliderSafe = Color(0xFF22C55E);
+
+  // dosing time background
+  static const Color dosingTimeBackground = Color(0xFFF5F3FF);
 }
