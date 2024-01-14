@@ -25,8 +25,25 @@ class MedicationBloc extends Bloc<MedicationEvent, MedicationState> {
     _MedicationsReceived event,
     Emitter<MedicationState> emit,
   ) async {
-    final medications = await _medicationRepository.fetchMedications();
+    emit(state.copyWith(status: MedicationStatus.loading));
 
-    emit(state.copyWith(medications: medications));
+    final fetchMedicationsResult =
+        await _medicationRepository.fetchMedications();
+
+    fetchMedicationsResult.when<void>(
+      (medications) {
+        emit(
+          state.copyWith(
+            status: MedicationStatus.success,
+            medications: medications,
+          ),
+        );
+      },
+      (error) {
+        emit(
+          state.copyWith(status: MedicationStatus.failure, errorMessage: error),
+        );
+      },
+    );
   }
 }

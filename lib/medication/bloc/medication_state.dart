@@ -5,5 +5,6 @@ class MedicationState with _$MedicationState {
   const factory MedicationState({
     @Default(IListConst<Medication>([])) IList<Medication> medications,
     @Default(MedicationStatus.initial) MedicationStatus status,
+    String? errorMessage,
   }) = _MedicationState;
 }
