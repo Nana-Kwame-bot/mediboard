@@ -1,5 +1,6 @@
 import "package:auto_size_text/auto_size_text.dart";
 import "package:dots_indicator/dots_indicator.dart";
+import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:flutter_hooks/flutter_hooks.dart";
 import "package:mediboard/colors/app_colors.dart";
@@ -54,7 +55,7 @@ class TrackingMeasures extends HookWidget {
                         color: Colors.white,
                       ),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Container(
                             padding: const EdgeInsets.all(10),
@@ -64,32 +65,52 @@ class TrackingMeasures extends HookWidget {
                             ),
                           ),
                           const Divider(),
+                          const Row(
+                            children: [
+                              AutoSizeText("B12"),
+                              Spacer(),
+                              AutoSizeText("173 pg/ml"),
+                              SizedBox(width: 8),
+                              AutoSizeText("Off Track"),
+                            ],
+                          ),
+                          const Spacer(),
                           Container(
-                            padding: const EdgeInsets.all(12),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                const Row(
-                                  children: [
-                                    AutoSizeText("B12"),
-                                    Spacer(),
-                                    AutoSizeText("173 pg/ml"),
-                                    SizedBox(width: 8),
-                                    AutoSizeText("Off Track"),
-                                  ],
-                                ),
-                                AutoSizeText(
-                                  "Last test result: 154 pg/ml (90 days ago)",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge
-                                      ?.copyWith(
-                                        color: AppColors.blueGrey,
-                                      ),
-                                  maxLines: 1,
-                                ),
-                              ],
+                            height: 2,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              // TODO(Nana-Kwame-bot): Work on this later.
+                              gradient: const LinearGradient(
+                                colors: [
+                                  AppColors.sliderDanger,
+                                  Colors.green,
+                                  AppColors.sliderDanger,
+                                ],
+                              ),
                             ),
+                            width: 200,
+                            child: SliderTheme(
+                              data: SliderThemeData(
+                                overlayShape: SliderComponentShape.noOverlay,
+                              ),
+                              child: CupertinoSlider(
+                                // you have to transparent colors to show gradient colors
+                                activeColor: Colors.transparent,
+                                // inactiveColor: Colors.transparent,
+                                max: 1300,
+                                value: 150,
+                                onChanged: (value) {},
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          AutoSizeText(
+                            "Last test result: 154 pg/ml (90 days ago)",
+                            style:
+                                Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                      color: AppColors.blueGrey,
+                                    ),
+                            maxLines: 1,
                           ),
                         ],
                       ),

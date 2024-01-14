@@ -24,4 +24,10 @@ abstract class AppColors {
 
   // blue grey Color Swatch
   static const Color blueGrey = Color(0xFF64748A);
+
+  // slider danger
+  static const Color sliderDanger = Color(0xFFEF4444);
+
+  // slider safe
+  static const Color sliderSafe = Color(0xFF22C55E);
 }
