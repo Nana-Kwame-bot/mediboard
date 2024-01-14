@@ -16,7 +16,13 @@ class App extends StatelessWidget {
 
     return MediBlocs(
       child: MaterialApp.router(
-        theme: ThemeData(textTheme: textTheme),
+        theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+            elevation: 0,
+          ),
+          textTheme: textTheme,
+        ),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         routerConfig: _appRouter.config(
