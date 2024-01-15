@@ -42,44 +42,44 @@
   "activities": {
     "visits": [
       {
-        "description": "Regular Checkup",
-        "visitedAt": "2022-01-01T10:00:00Z",
-        "doctor": "Dr. Smith",
+        "description": "Your visit to Dr. David Q. Cochran is coming soon",
+        "visitedAt": "March 15, 2023",
+        "doctor": "Dr. David Q. Cochran",
         "visitType": "followUp"
       }
     ],
     "vaccinations": [
       {
-        "description": "Flu Shot",
-        "visitedAt": "2022-01-01T10:00:00Z",
-        "doctor": "Dr. Smith",
-        "visitType": "newVisit"
+        "description": "Your visit to Dr. David Q. Cochran is coming soon",
+        "visitedAt": "March 15, 2023",
+        "doctor": "Dr. David Q. Cochran",
+        "visitType": "followUp"
       }
     ],
     "labTests": [
       {
         "priority": "high",
-        "description": "Blood Test",
-        "timeConducted": "2022-01-01T10:00:00Z",
-        "conductedAt": "LabCorp",
-        "referredBy": "Dr. Smith"
+        "description": "Upload your Blood test results",
+        "timeConducted": "Feb 27, 2023",
+        "conductedAt": "Assuta Medical Center",
+        "referredBy": "Dr. David Q. Cochran"
       }
     ],
     "imaging": [
       {
-        "priority": "medium",
-        "description": "X-Ray",
-        "lastRenewedAt": "2022-01-01T10:00:00Z",
-        "referredBy": "Dr. Smith",
-        "diagnosis": "Fracture"
+        "priority": "high",
+        "description": "Your subscription to Creon is about to expire",
+        "lastRenewedAt": "Dec 28, 2022",
+        "referredBy": "Dr. Boaz",
+        "diagnosis": "Food digestion"
       }
     ],
     "surgeries": [
       {
-        "description": "Appendectomy",
-        "visitedAt": "2022-01-01T10:00:00Z",
-        "doctor": "Dr. Smith",
-        "visitType": "unknown"
+        "description": "Your visit to Dr. David Q. Cochran is coming soon",
+        "visitedAt": "March 15, 2023",
+        "doctor": "Dr. David Q. Cochran",
+        "visitType": "followUp"
       }
     ]
   }
