@@ -59,7 +59,6 @@ class MediBlocs extends StatelessWidget {
                   const ActivityEvent.activitiesReceived(),
                 );
             },
-            child: Container(),
           ),
           BlocProvider<TrackingMeasureBloc>(
             create: (context) {
