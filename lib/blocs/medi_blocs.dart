@@ -4,6 +4,8 @@ import "package:mediboard/activity/bloc/activity_bloc.dart";
 import "package:mediboard/activity/repository/activity_repository.dart";
 import "package:mediboard/medication/bloc/medication_bloc.dart";
 import "package:mediboard/medication/repository/medication_repository.dart";
+import "package:mediboard/tracking_measure/bloc/tracking_measure_bloc.dart";
+import "package:mediboard/tracking_measure/repository/tracking_measure_repository.dart";
 import "package:mediboard/user/repository/user_repository.dart";
 
 class MediBlocs extends StatelessWidget {
@@ -31,7 +33,13 @@ class MediBlocs extends StatelessWidget {
               userRepository: context.read<UserRepository>(),
             );
           },
-          child: Container(),
+        ),
+        RepositoryProvider<TrackingMeasureRepository>(
+          create: (context) {
+            return TrackingMeasureRepository(
+              userRepository: context.read<UserRepository>(),
+            );
+          },
         ),
       ],
       child: MultiBlocProvider(
@@ -52,6 +60,16 @@ class MediBlocs extends StatelessWidget {
                 );
             },
             child: Container(),
+          ),
+          BlocProvider<TrackingMeasureBloc>(
+            create: (context) {
+              return TrackingMeasureBloc(
+                trackingMeasureRepository:
+                    context.read<TrackingMeasureRepository>(),
+              )..add(
+                  const TrackingMeasureEvent.trackingMeasuresRecieved(),
+                );
+            },
           ),
         ],
         child: child,

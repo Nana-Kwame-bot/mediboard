@@ -32,7 +32,6 @@ class MediTiles extends StatelessWidget {
               shrinkWrap: true,
               padding: const EdgeInsets.symmetric(vertical: 4),
               children: [
-                // TODO(Nana-Kwame-bot): Make them spread horizontally instead of vertically
                 VisitsWidget(visits: visits),
                 VaccinationsWidget(vaccinations: vaccinations),
                 LabTestsWidget(labTests: labTests),

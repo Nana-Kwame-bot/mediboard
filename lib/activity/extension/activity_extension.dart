@@ -21,6 +21,14 @@ extension ActivityExtension on Activity {
 
   bool get hasSurgeries => surgeries.isNotEmpty;
 
+  bool get hasActivities {
+    return hasVisits ||
+        hasVaccinations ||
+        hasLabTests ||
+        hasImaging ||
+        hasSurgeries;
+  }
+
   int get numberOfActivities {
     return numberOfVisits +
         numberOfVaccinations +

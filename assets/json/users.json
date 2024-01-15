@@ -82,5 +82,42 @@
         "visitType": "followUp"
       }
     ]
-  }
+  },
+  "trackingMeasures": [
+    {
+      "runtimeType": "b12",
+      "date": "Feb 15, 2023",
+      "value": 173,
+      "unit": "pg/ml",
+      "status": "offTrack",
+      "lastTestResult": "154 pg/ml (90 days ago)"
+    },
+    {
+      "runtimeType": "bpm",
+      "date": "1 day ago",
+      "value": 92,
+      "name": "Avg. Heart Rate",
+      "status": "good",
+      "tech": "oura",
+      "records": "+1 Record"
+    },
+    {
+      "runtimeType": "bpm",
+      "date": "1 day ago",
+      "value": 89,
+      "name": "Sleep Score",
+      "status": "good",
+      "tech": "oura",
+      "records": ""
+    },
+    {
+      "runtimeType": "bpm",
+      "date": "1 day ago",
+      "value": 92,
+      "name": "Glucose levels",
+      "status": "good",
+      "tech": "carelink",
+      "records": ""
+    }
+  ]
 }
