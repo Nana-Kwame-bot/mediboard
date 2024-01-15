@@ -1,4 +1,5 @@
 import "package:auto_size_text/auto_size_text.dart";
+import "package:badges/badges.dart" as badges;
 import "package:flutter/material.dart";
 import "package:mediboard/colors/app_colors.dart";
 import "package:mediboard/gen/assets.gen.dart";
@@ -17,7 +18,20 @@ class HomePageAppBar extends StatelessWidget {
       ),
       actions: [
         IconButton(
-          icon: Assets.icons.bell.image(),
+          icon: badges.Badge(
+            badgeStyle: const badges.BadgeStyle(
+              padding: EdgeInsets.all(4),
+              borderRadius: BorderRadius.all(Radius.circular(4)),
+              badgeColor: AppColors.sliderSafe,
+            ),
+            position: badges.BadgePosition.topEnd(top: -7, end: -3),
+            badgeContent: Container(
+              decoration: const BoxDecoration(shape: BoxShape.circle),
+              width: 1,
+              height: 1,
+            ),
+            child: Assets.icons.bell.image(),
+          ),
           onPressed: () {},
         ),
       ],

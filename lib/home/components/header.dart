@@ -53,8 +53,10 @@ class _HeaderState extends State<Header> {
                     children: [
                       badges.Badge(
                         badgeStyle: const badges.BadgeStyle(
-                          borderSide:
-                              BorderSide(color: AppColors.background, width: 2),
+                          borderSide: BorderSide(
+                            color: AppColors.background,
+                            width: 2,
+                          ),
                         ),
                         badgeContent: Padding(
                           padding: const EdgeInsets.all(2),
