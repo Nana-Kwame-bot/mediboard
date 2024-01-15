@@ -1,0 +1,3 @@
+class TrackingMeasureRepository {
+  const TrackingMeasureRepository();
+}
