@@ -5,6 +5,6 @@ class ActivityState with _$ActivityState {
   const factory ActivityState({
     String? errorMessage,
     @Default(ActivityStatus.initial) ActivityStatus status,
-    @Default(Activity()) Activity activities,
+    @Default(Activity()) Activity activity,
   }) = _ActivityState;
 }

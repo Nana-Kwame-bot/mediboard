@@ -27,10 +27,10 @@ class ActivityRepository {
 
           final userMap = jsonDecode(jsonString) as Map<String, dynamic>;
 
-          if (userMap case {"activities": final Map<String, dynamic> map}) {
-            final activities = Activity.fromJson(map);
+          if (userMap case {"activity": final Map<String, dynamic> map}) {
+            final activity = Activity.fromJson(map);
 
-            return Result.success(activities);
+            return Result.success(activity);
           }
 
           return const Result.error("Error fetching activities");

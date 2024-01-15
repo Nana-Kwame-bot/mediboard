@@ -1,12 +1,10 @@
 import "dart:async";
-
 import "package:bloc/bloc.dart";
 import "package:bloc_concurrency/bloc_concurrency.dart";
 import "package:freezed_annotation/freezed_annotation.dart";
 import "package:mediboard/activity/enums/activity_status.dart";
 import "package:mediboard/activity/models/activity/activity.model.dart";
 import "package:mediboard/activity/repository/activity_repository.dart";
-import "package:mediboard/logger/logger.dart";
 
 part "activity_event.dart";
 part "activity_state.dart";
@@ -30,14 +28,9 @@ class ActivityBloc extends Bloc<ActivityEvent, ActivityState> {
     final fetchActivitiesResult = await _activityRepository.fetchActivities();
 
     fetchActivitiesResult.when<void>(
-      (activities) {
-        logger.e("activities: $activities");
-
+      (activity) {
         emit(
-          state.copyWith(
-            status: ActivityStatus.success,
-            activities: activities,
-          ),
+          state.copyWith(status: ActivityStatus.success, activity: activity),
         );
       },
       (error) {

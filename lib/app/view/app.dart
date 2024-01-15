@@ -17,6 +17,7 @@ class App extends StatelessWidget {
     return MediBlocs(
       child: MaterialApp.router(
         theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white,
             elevation: 0,

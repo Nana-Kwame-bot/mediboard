@@ -144,7 +144,7 @@ class ActiveMedications extends HookWidget {
               selector: (medicationState) => medicationState.medications.length,
               builder: (context, length) {
                 return DotsIndicator(
-                  dotsCount: length,
+                  dotsCount: length == 0 ? 1 : length,
                   position: currentPage.value,
                   decorator: const DotsDecorator(
                     activeColor: AppColors.eclipse,

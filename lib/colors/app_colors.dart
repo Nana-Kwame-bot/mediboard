@@ -54,4 +54,7 @@ abstract class AppColors {
 
   // blue 50
   static const Color blue50 = Color(0xFFEFF6FF);
+
+  // background
+  static const Color background = Color(0XFFF1F5F9);
 }

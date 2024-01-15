@@ -30,22 +30,28 @@ extension ActivityExtension on Activity {
   }
 
   double get visitsPercentage {
-    return numberOfVisits / numberOfActivities;
+    return numberOfActivities != 0 ? numberOfVisits / numberOfActivities : 0.0;
   }
 
   double get vaccinationsPercentage {
-    return numberOfVaccinations / numberOfActivities;
+    return numberOfActivities != 0
+        ? numberOfVaccinations / numberOfActivities
+        : 0.0;
   }
 
   double get labTestsPercentage {
-    return numberOfLabTests / numberOfActivities;
+    return numberOfActivities != 0
+        ? numberOfLabTests / numberOfActivities
+        : 0.0;
   }
 
   double get imagingPercentage {
-    return numberOfImaging / numberOfActivities;
+    return numberOfActivities != 0 ? numberOfImaging / numberOfActivities : 0.0;
   }
 
   double get surgeriesPercentage {
-    return numberOfSurgeries / numberOfActivities;
+    return numberOfActivities != 0
+        ? numberOfSurgeries / numberOfActivities
+        : 0.0;
   }
 }
