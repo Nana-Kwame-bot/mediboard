@@ -38,9 +38,7 @@ class ActiveMedications extends HookWidget {
               height: 196,
               child: BlocSelector<MedicationBloc, MedicationState,
                   IList<Medication>>(
-                selector: (medicationState) {
-                  return medicationState.medications;
-                },
+                selector: (medicationState) => medicationState.medications,
                 builder: (context, medications) {
                   return PageView.builder(
                     padEnds: false,

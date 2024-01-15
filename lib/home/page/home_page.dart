@@ -5,13 +5,13 @@ import "package:mediboard/activity/bloc/activity_bloc.dart";
 import "package:mediboard/activity/enums/activity_status.dart";
 import "package:mediboard/colors/app_colors.dart";
 import "package:mediboard/gen/assets.gen.dart";
-import "package:mediboard/home/components/active_medications.dart";
+import "package:mediboard/home/components/active_medications/active_medications.dart";
 import "package:mediboard/home/components/donut_chart.dart";
 import "package:mediboard/home/components/header.dart";
 import "package:mediboard/home/components/home_page_app_bar.dart";
 import "package:mediboard/home/components/medi_tiles.dart";
 import "package:mediboard/home/components/medi_tiles_shimmer.dart";
-import "package:mediboard/home/components/tracking_measures.dart";
+import "package:mediboard/home/components/tracking_measures/tracking_measures.dart";
 
 @RoutePage()
 class HomePage extends StatelessWidget {
