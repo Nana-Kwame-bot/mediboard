@@ -16,7 +16,7 @@ dependencies:
   bloc_concurrency: ^0.2.3
   collection: ^1.18.0
   dots_indicator: ^3.0.0
-  fast_immutable_collections: ^9.2.0
+  fast_immutable_collections: ^9.2.1
   fl_chart: ^0.66.0
   flutter:
     sdk: flutter
